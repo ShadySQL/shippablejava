@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+   - oraclejdk8
+
+before_install:
+   - apt-get install -y maven
+
+script:
+   - mvn clean cobertura:cobertura
+   - mvn test
